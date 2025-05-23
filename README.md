@@ -1,5 +1,3 @@
->📋  A template README.md for code accompanying a Machine Learning paper
-
 # Visual Prompt Tuning under Demographic Imbalance: A Fairness and Utility Analysis
 
 ## Requirements
