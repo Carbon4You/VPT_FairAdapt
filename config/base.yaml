@@ -1,0 +1,23 @@
+#
+#
+# ----------------------------------------------------------------------
+# General options
+# ----------------------------------------------------------------------
+#
+#
+OUTPUT_DIR : "./data/output/"
+LOG_DIR : "logs"
+CHECKPOINT_DIR : "checkpoints"
+TENSORBOARD_DIR : "tensorboard"
+RANK : 0
+WORLD_SIZE : 1
+MULTIPROCESSING_DISTRIBUTED : True
+CUDA : True
+SLURM_JOB_ID : None
+#
+#
+# ----------------------------------------------------------------------
+# END
+# ----------------------------------------------------------------------
+#
+#

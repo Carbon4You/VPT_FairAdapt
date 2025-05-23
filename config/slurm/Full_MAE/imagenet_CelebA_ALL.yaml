@@ -1,0 +1,45 @@
+_BASE_: "./full_base.yaml"
+#
+#
+# ----------------------------------------------------------------------
+# Model options
+# ----------------------------------------------------------------------
+#
+#
+MODEL:
+  SAVE_FREQUENCY: 1
+  PRETRAINED_DATASET: "imagenet"
+  BACKBONE_PATH: "./data/input/imagenet_pretrained_mae_vitb.pth"
+#
+#
+# ----------------------------------------------------------------------
+# Solver options
+# ----------------------------------------------------------------------
+#
+#
+SOLVER:
+  OPTIMIZER: "sgd"
+  LEARNING_RATE: 0.1
+  WEIGHT_DECAY: 0.00001
+  WARMUP_EPOCHS: 10
+  LAST_EPOCH: 100
+#
+#
+# ----------------------------------------------------------------------
+# Dataset options
+# ----------------------------------------------------------------------
+#
+#
+DATASET:
+  NAMES: ["CelebA_VTAB"]
+  SUBSET: "ALL"
+  PATHS: ["/datasets/celeba_pytorch/celeba/"]
+  DATA_PATHS: ["/datasets/celeba_pytorch/celeba/img_align_celeba/"]
+  BATCH_SIZE: 128
+#
+#
+# ----------------------------------------------------------------------
+# END
+# ----------------------------------------------------------------------
+#
+#

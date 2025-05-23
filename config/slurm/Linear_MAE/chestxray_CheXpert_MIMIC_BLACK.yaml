@@ -1,0 +1,45 @@
+_BASE_: "./linear_base.yaml"
+#
+#
+# ----------------------------------------------------------------------
+# Model options
+# ----------------------------------------------------------------------
+#
+#
+MODEL:
+  SAVE_FREQUENCY: 1
+  PRETRAINED_DATASET: "chestxray"
+  BACKBONE_PATH: "./data/input/mae_chexpert_mimic_cxr_pre799.pth"
+#
+#
+# ----------------------------------------------------------------------
+# Solver options
+# ----------------------------------------------------------------------
+#
+#
+SOLVER:
+  OPTIMIZER: "sgd"
+  LEARNING_RATE: 0.1
+  WEIGHT_DECAY: 0.00001
+  WARMUP_EPOCHS: 5
+  LAST_EPOCH: 75
+#
+#
+# ----------------------------------------------------------------------
+# Dataset options
+# ----------------------------------------------------------------------
+#
+#
+DATASET:
+  NAMES : ["CheXpertMAE", "MIMIC_CXR_MAE"]
+  SUBSET : "BLACK"
+  PATHS : ["data/datasets/chexpert/BLACK/", "data/datasets/mimic_cxr/BLACK/"]
+  DATA_PATHS : ["/path/to/chexpert/", "/path/to/chexpert/"]
+  BATCH_SIZE : 128
+#
+#
+# ----------------------------------------------------------------------
+# END
+# ----------------------------------------------------------------------
+#
+#
